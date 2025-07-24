@@ -202,9 +202,9 @@ class MusicPlayer {
 
     // Create gradient
     const gradient = this.ctx.createLinearGradient(0, this.canvas.height, 0, 0)
-    gradient.addColorStop(0, '#667eea')
-    gradient.addColorStop(0.5, '#764ba2')
-    gradient.addColorStop(1, '#ff6b6b')
+    gradient.addColorStop(0, '#07229aff')
+    gradient.addColorStop(0.5, '#260943ff')
+    gradient.addColorStop(1, '#bc2f2fff')
 
     for (let i = 0; i < this.dataArray.length; i++) {
       barHeight = (this.dataArray[i] / 255) * this.canvas.height * 0.8
@@ -223,8 +223,8 @@ class MusicPlayer {
     const barWidth = 4
     const barCount = Math.floor(this.canvas.width / (barWidth + 1))
     const gradient = this.ctx.createLinearGradient(0, this.canvas.height, 0, 0)
-    gradient.addColorStop(0, 'rgba(102, 126, 234, 0.3)')
-    gradient.addColorStop(1, 'rgba(118, 75, 162, 0.3)')
+    gradient.addColorStop(0, 'rgba(11, 22, 74, 0.3)')
+    gradient.addColorStop(1, 'rgba(15, 4, 27, 0.3)')
 
     this.ctx.fillStyle = gradient
 

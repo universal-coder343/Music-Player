@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navbar">
+      <h3 id="heading-main">Music Player</h3>
+    </div>
+
+    <div id="main-body">
+      <div class="player-container">
+        <div class="music-player">
+          <div class="album-art" id="albumArt">🎵</div>
+
+          <div class="song-info">
+            <div class="song-title" id="songTitle">Select a song</div>
+            <div class="artist-name" id="artistName">Unknown Artist</div>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+              <div class="progress" id="progress"></div>
+            </div>
+            <div class="time-info">
+              <span id="currentTime">0:00</span>
+              <span id="duration">0:00</span>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button class="control-btn" id="prevBtn">⏮</button>
+            <button class="play-pause-btn" id="playPauseBtn">▶</button>
+            <button class="control-btn" id="nextBtn">⏭</button>
+          </div>
+
+          <div class="volume-control">
+            <span>🔊</span>
+            <input
+              type="range"
+              class="volume-slider"
+              id="volumeSlider"
+              min="0"
+              max="100"
+              value="50"
+            />
+          </div>
+
+          <div class="file-input">
+            <input type="file" id="fileInput" accept="audio/*" multiple />
+            <label for="fileInput">Choose MP3 Files</label>
+          </div>
+        </div>
+
+        <div class="playlist-container">
+          <div class="playlist-title">Playlist</div>
+          <div class="playlist" id="playlist"></div>
+        </div>
+      </div>
+      <!-- ADDED: New visualizer container -->
+      <div class="visualizer-container">
+        <div class="visualizer-title">Audio Visualizer</div>
+        <canvas id="visualizer" width="350" height="120"></canvas>
+      </div>
+
+      <audio id="audio"></audio>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
